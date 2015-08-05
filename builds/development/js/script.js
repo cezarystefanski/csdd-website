@@ -6,7 +6,7 @@ $(document).foundation();
 /*
  * Replace all SVG images with inline SVG
  */
-jQuery('img.svg').each(function(){
+/*jQuery('img.svg').each(function(){
     var $img = jQuery(this);
     var imgID = $img.attr('id');
     var imgClass = $img.attr('class');
@@ -33,7 +33,7 @@ jQuery('img.svg').each(function(){
 
     }, 'xml');
 
-});
+});*/
 
 $(document).ready(function(){
     var liame = ['com', 'cezary', 'csdd', 'pl'];

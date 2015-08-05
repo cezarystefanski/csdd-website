@@ -4291,7 +4291,11 @@ meta.foundation-data-attribute-namespace {
   font-family: false; }
 
 body {
+  width: 100%;
   overflow-x: hidden; }
+
+.row .row {
+  margin: 0 0; }
 
 .top-bar {
   background-color: #f9ba32; }
@@ -4347,7 +4351,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1px; }
+    margin: 0.1em; }
     @media only screen and (max-width: 58.75em) {
       header .logo {
         display: none; } }
@@ -4359,7 +4363,8 @@ header {
   header p {
     margin-left: auto;
     margin-right: auto;
-    display: inline-block;
+    display: block;
+    text-align: center;
     color: #f8f1e5;
     font-size: 1.2em;
     font-weight: bold; }
