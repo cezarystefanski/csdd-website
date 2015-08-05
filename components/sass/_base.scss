@@ -1,0 +1,314 @@
+#{headings()} {
+}
+
+meta.foundation-data-attribute-namespace {
+  font-family: false; 
+}
+
+body {
+	overflow-x: hidden;
+}
+
+$header-font-family: "Amatic SC", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$logo-font-stack: "Amatic SC", "Helvetica Neue", Tahoma, Geneva, sans-serif;
+
+.top-bar {
+	background-color: $primary-color;
+	.name {
+		margin-left: 0.5em;
+		.logo {
+			display: flex;
+		}
+		h1 {
+			font-size: 0.8em;
+			line-height: 1;
+		}
+		.bracket {
+			h1 {
+				line-height: 1.4;
+				margin: 0 0.05em;
+			}
+		}
+	}
+	.menu-icon {
+		font-size: 1.5em;
+		a {
+			span {
+				padding-right: 1em;
+			}
+		}
+	}
+}
+
+.top-bar-section {
+	ul {
+		margin-left: 1em;
+		li {
+			a {
+				font-size: 1.5em;
+				i {
+					font-size: 0.75em;
+					vertical-align: middle;
+					margin-right: 0.5em;
+				}
+			}
+			a:not(.button) {
+				background-color: $primary-color;
+			}
+		}
+	}
+}
+
+.top-bar.expanded {
+	background-color: $primary-color;
+	.title-area {
+		background-color: $primary-color;
+	}
+	.toggle-topbar {
+		a {
+			color: $body-bg;
+		}
+		.menu-icon {
+			a {
+				color: $body-bg;
+			}
+		}
+	}
+}
+
+.contain-to-grid {
+	background-color: $primary-color;
+}
+
+header {
+	background-color: $primary-color;
+	font-family: $logo-font-stack;
+	text-align: center;
+	h1 {
+		font-size: 2.5em;
+		margin: 0 0.05em;
+		font-family: $logo-font-stack;
+		color: $body-bg;
+		line-height: 1;
+	}
+	.logo {
+		display: flex; 
+		justify-content: center;
+		align-items: center;
+		margin: 1px;
+		@media only screen and (max-width: #{$topbar-breakpoint}) {
+			display: none;
+		}
+	}
+	.bracket {
+		font-size: 2.5em;
+		font-weight: 400;
+		h1 {
+			line-height: 1.4;
+		}
+	}
+	p {
+		margin-left: auto;
+		margin-right: auto;
+		display: inline-block;
+		color: $body-bg;
+		font-size: 1.2em;
+		font-weight: bold;
+		@media only screen and (max-width: #{$topbar-breakpoint}) {
+			margin-bottom: 0.2em;
+		}
+	}
+}
+
+article+article {
+	margin-top: 5em;
+}
+
+article#oMnie {
+	text-align: center;
+	img:not(.svg) {
+		@include border-radius(15%);
+	}
+	.svg {
+		width: 33%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		path {
+			fill: $body-font-color !important;
+		}
+	}
+	p {
+		margin-top: 0.25em;
+		i {
+			color: $secondary-color;
+		}
+	}
+}
+
+article#skills {
+	text-align: center;
+	.skillSlot {
+		margin-bottom: 2em;
+		padding-top: 2em;
+		padding-bottom: 2em;
+		@include border-radius(1em, 1em);
+		@include transition(all 0.75s ease-in);
+  		img {
+  			@include transition(all 0.5s ease-in);
+			@include filter(grayscale(100%));
+		}
+		&:hover, &:active {
+			background-color: $primary-color;
+			img {
+				@include filter(grayscale(0%));
+				@include transform(rotate(-10deg));
+			}
+		}
+		p {
+			color: $body-font-color;
+			&:hover, &:active {
+				color: $body-font-color;
+			}
+		}
+		&:last-of-type {
+			@extend .end;
+		}
+	}
+	img {
+		width: 33%;
+		fill: $body-font-color;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	p {
+		margin-top: 0.25em;
+		margin-bottom: 0.3em;
+	}
+	.progress {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.meter {
+		background: $secondary-color;
+		font-weight: bold;
+		color: $body-bg;
+		padding-top: 0.1em;
+	}
+}
+
+article#portfolio {
+	.projectSlot {
+		text-align: center;
+		img {
+			@include border-radius(1em, 1em);
+			@include transition(all 0.5s ease-in);
+			@include filter(grayscale(100%));
+			&:hover, &:active {
+				@include filter(grayscale(0%));
+			}
+		}
+		&:last-of-type {
+			@extend .end;
+		}
+		p {
+			text-align: center;
+			display: inline-block;
+			width: auto;
+			margin-left: auto;
+			margin-right: auto;
+			border-bottom: 1px solid $primary-color;
+		}
+	}
+}
+
+.projectModal {
+	img {
+		max-width: 35em;
+		margin-bottom: 1em;
+	}
+}
+
+article:not(:last-of-type) {
+	h1 {
+		text-align: center;
+	}
+}
+
+article:not(:last-of-type):not(:first-of-type){
+	h1 {
+		border-top: 3px solid $primary-color;
+	}
+}
+
+article:last-of-type {
+	background-color: $secondary-color;
+	h1 {
+		color: $body-bg;
+		text-align: center;
+	}
+	p {
+		color: $body-bg;
+		text-align: center;
+	}
+	.social {
+		font-size: 2em;
+		text-align: center;
+		margin-left: 0;;
+		li {
+			display: inline-block;
+			padding: 0.1em;
+			a {
+				color: $body-bg;
+				border-bottom: none;
+				&:hover, &:active {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+
+.e-l {
+	border-bottom: 1px solid $primary-color;
+}
+
+a {
+	color: $body-font-color;
+	border-bottom: 1px solid $primary-color;
+}
+
+figure {
+	img {
+		margin-bottom: 0.1em;
+	}
+	figcaption {
+		text-align: center;
+		p {
+			font-size: 0.75em;
+		}
+	}
+}
+
+footer {
+	padding-top: 1.5em;
+	background-color: $secondary-color;
+	text-align: center;
+	p {
+		color: $body-bg;
+	}
+	div {
+		font-size: 0.7em;
+		a {
+			color: $body-bg;
+			margin-left: 0.25em;
+			margin-right: 0.25em;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+// compass partials
+@import "compass";
+@import "compass/reset";
+@import "compass/layout/sticky-footer";
+@import "compass/css3/filter";
+
+// foundation
+@import 'foundation/foundation.scss';
+
+// normal partials
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'modules';
+
+// font awesome
+// @import 'fontAwesome/font-awesome.scss';
+
+// google fonts
+@import url(http://fonts.googleapis.com/css?family=Lora|Oswald:700|Amatic+SC:400,700);
