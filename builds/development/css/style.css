@@ -4294,6 +4294,50 @@ body {
   width: 100%;
   overflow-x: hidden; }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9ba32;
+  z-index: 10;
+  background-color: #f9ba32;
+  font-family: "Amatic SC", "Helvetica Neue", Tahoma, Geneva, sans-serif;
+  text-align: center; }
+  #preloader #image {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url("/images/preloader/grid.svg") no-repeat center;
+    margin: -60px 0 0 -60px; }
+  #preloader h1 {
+    font-size: 2.5em;
+    margin: 0 0.05em;
+    font-family: "Amatic SC", "Helvetica Neue", Tahoma, Geneva, sans-serif;
+    color: #f8f1e5;
+    line-height: 1; }
+  #preloader .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.1em; }
+  #preloader .bracket {
+    font-size: 2.5em;
+    font-weight: 400; }
+    #preloader .bracket h1 {
+      line-height: 1.4; }
+  #preloader p {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    color: #f8f1e5;
+    font-size: 1.2em;
+    font-weight: bold; }
+
 .row .row {
   margin: 0 0; }
 

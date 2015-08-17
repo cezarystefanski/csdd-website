@@ -1,3 +1,8 @@
+$(window).load(function() { // Czekamy na załadowanie całej zawartości strony
+    $("#preloader #image").fadeOut(); // Usuwamy grafikę ładowania
+    $("#preloader").delay(350).fadeOut("slow"); // Usuwamy diva przysłaniającego stronę
+})
+
 console.log('Checking the console? Naughty!');
 
 $(document).foundation();
